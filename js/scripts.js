@@ -183,7 +183,7 @@ function showPlayerDetails(name, position, details) {
     const playerDetails = document.getElementById('playerDetails');
     playerDetails.innerHTML = `
                 <div style="text-align: center; color: #2c3e50;">
-                    <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(45deg, #667eea, #764ba2); margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; font-weight: bold;">
+                    <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(45deg, #e5ab4e, #e18f3e); margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; font-weight: bold;">
                         ${name.split(' ')[0].charAt(0)}${name.split(' ')[1] ? name.split(' ')[1].charAt(0) : ''}
                     </div>
                     <h2 style="margin-bottom: 0.5rem;">${name}</h2>
