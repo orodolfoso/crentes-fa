@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crentes FA</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🦅 Crentes FA</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" onclick="showSection('home')">Início</a></li>
+                <li><a href="#" onclick="showSection('about')">Sobre</a></li>
+                <li><a href="#" onclick="showSection('team')">Elenco</a></li>
+                <li><a href="#" onclick="showSection('jerseys')">Camisas</a></li>
+                <li><a href="#" onclick="showSection('news')">Notícias</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contato</a></li>
+                <li><a href="#" onclick="showCart()">🛒 <span id="cartCount">0</span></a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1><img src="assets/logo-cfa.png" width="400px" alt="Logo-Crentes FA"></h1>
+                <p>Tradição, Paixão e Vitórias desde 1997. O clube que conquistou o coração da cidade e continua fazendo
+                    história no futebol.</p>
+                <button class="cta-button" onclick="showSection('jerseys')">Comprar Camisa Oficial</button>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🏆 Próximo Jogo</h3>
+                    <p><strong>FC Dragons vs Leões FC</strong></p>
+                    <p>Domingo, 15/09 às 16h</p>
+                    <p>Estádio Municipal</p>
+                </div>
+                <div class="card">
+                    <h3>📈 Posição no Campeonato</h3>
+                    <p><strong>3º Lugar</strong></p>
+                    <p>25 pontos em 12 jogos</p>
+                    <p>8 vitórias, 1 empate, 3 derrotas</p>
+                </div>
+                <div class="card">
+                    <h3>⚽ Artilheiro</h3>
+                    <p><strong>Carlos Silva</strong></p>
+                    <p>12 gols no campeonato</p>
+                    <p>Atacante #9</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div style="color: #fff; text-align: center; padding: 2rem 0;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Nossa História</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>🏛️ Fundação</h3>
+                        <p>Fundado em 1925 por um grupo de trabalhadores apaixonados por futebol, o FC Dragons nasceu no
+                            bairro industrial da cidade com o sonho de representar a classe operária nos gramados.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🏆 Conquistas</h3>
+                        <p><strong>5x Campeão Estadual</strong> (1967, 1985, 1998, 2010, 2019)</p>
+                        <p><strong>3x Campeão Regional</strong> (2005, 2012, 2020)</p>
+                        <p><strong>1x Vice-campeão Nacional</strong> (2015)</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎯 Missão</h3>
+                        <p>Formar não apenas grandes jogadores, mas também cidadãos exemplares. Nosso compromisso é com
+                            o esporte, educação e desenvolvimento social da comunidade.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🏟️ Estádio</h3>
+                        <p><strong>Arena dos Dragões</strong></p>
+                        <p>Capacidade: 25.000 torcedores</p>
+                        <p>Inaugurado em 1978, reformado em 2018</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="section">
+            <div style="color: #fff; text-align: center; padding: 2rem 0;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Elenco e Comissão Técnica</h2>
+
+                <h3 style="margin: 2rem 0 1rem 0; color: #4ecdc4;">Comissão Técnica</h3>
+                <div class="card-grid">
+                    <div class="player-card">
+                        <div class="player-avatar">👨‍🏫</div>
+                        <h4>Roberto Santos</h4>
+                        <p>Técnico Principal</p>
+                        <small>15 anos de experiência</small>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-avatar">👨‍⚕️</div>
+                        <h4>Dr. Paulo Lima</h4>
+                        <p>Preparador Físico</p>
+                        <small>Especialista em alto rendimento</small>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-avatar">🥅</div>
+                        <h4>João Ferreira</h4>
+                        <p>Treinador de Goleiros</p>
+                        <small>Ex-goleiro profissional</small>
+                    </div>
+                </div>
+
+                <h3 style="margin: 3rem 0 1rem 0; color: #4ecdc4;">Jogadores - Ataque</h3>
+                <div class="card-grid">
+                    <div class="player-card">
+                        <div class="player-avatar">9</div>
+                        <h4>Carlos Silva</h4>
+                        <p>Centroavante</p>
+                        <small>12 gols na temporada</small>
+                        <button class="cta-button" style="margin-top: 1rem; font-size: 0.8rem;"
+                            onclick="showPlayerDetails('Carlos Silva', 'Centroavante', '28 anos, 1.85m, Artilheiro do time com 12 gols')">Ver
+                            Detalhes</button>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-avatar">11</div>
+                        <h4>Rafael Costa</h4>
+                        <p>Ponta Esquerda</p>
+                        <small>8 assistências</small>
+                        <button class="cta-button" style="margin-top: 1rem; font-size: 0.8rem;"
+                            onclick="showPlayerDetails('Rafael Costa', 'Ponta Esquerda', '25 anos, 1.78m, Velocidade e dribles são seus pontos fortes')">Ver
+                            Detalhes</button>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-avatar">7</div>
+                        <h4>Bruno Oliveira</h4>
+                        <p>Ponta Direita</p>
+                        <small>5 gols, 6 assistências</small>
+                        <button class="cta-button" style="margin-top: 1rem; font-size: 0.8rem;"
+                            onclick="showPlayerDetails('Bruno Oliveira', 'Ponta Direita', '26 anos, 1.75m, Excelente finalizador e criador de jogadas')">Ver
+                            Detalhes</button>
+                    </div>
+                </div>
+
+                <h3 style="margin: 3rem 0 1rem 0; color: #4ecdc4;">Meio-campo</h3>
+                <div class="card-grid">
+                    <div class="player-card">
+                        <div class="player-avatar">10</div>
+                        <h4>Lucas Pereira</h4>
+                        <p>Meia Atacante</p>
+                        <small>Capitão do time</small>
+                        <button class="cta-button" style="margin-top: 1rem; font-size: 0.8rem;"
+                            onclick="showPlayerDetails('Lucas Pereira', 'Meia Atacante', '30 anos, 1.80m, Capitão e cérebro do time, 10 anos no clube')">Ver
+                            Detalhes</button>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-avatar">8</div>
+                        <h4>Gabriel Santos</h4>
+                        <p>Volante</p>
+                        <small>Revelação da base</small>
+                        <button class="cta-button" style="margin-top: 1rem; font-size: 0.8rem;"
+                            onclick="showPlayerDetails('Gabriel Santos', 'Volante', '22 anos, 1.82m, Jovem promessa formada nas categorias de base')">Ver
+                            Detalhes</button>
+                    </div>
+                </div>
+
+                <h3 style="margin: 3rem 0 1rem 0; color: #4ecdc4;">Defesa</h3>
+                <div class="card-grid">
+                    <div class="player-card">
+                        <div class="player-avatar">3</div>
+                        <h4>Ricardo Alves</h4>
+                        <p>Zagueiro</p>
+                        <small>Vice-capitão</small>
+                        <button class="cta-button" style="margin-top: 1rem; font-size: 0.8rem;"
+                            onclick="showPlayerDetails('Ricardo Alves', 'Zagueiro', '32 anos, 1.88m, Vice-capitão, sólido na defesa e líder dentro de campo')">Ver
+                            Detalhes</button>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-avatar">1</div>
+                        <h4>André Silva</h4>
+                        <p>Goleiro</p>
+                        <small>Titular absoluto</small>
+                        <button class="cta-button" style="margin-top: 1rem; font-size: 0.8rem;"
+                            onclick="showPlayerDetails('André Silva', 'Goleiro', '29 anos, 1.90m, Reflexos excepcionais e liderança na defesa')">Ver
+                            Detalhes</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jerseys Section -->
+        <section id="jerseys" class="section">
+            <div style="color: #fff; text-align: center; padding: 2rem 0;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Camisas Oficiais</h2>
+                <div class="jersey-showcase">
+                    <div class="jersey-card">
+                        <div class="jersey-icon">👕</div>
+                        <h3>Camisa Principal</h3>
+                        <p>Tradicional camisa azul com detalhes dourados</p>
+                        <div class="price">R$ 89,90</div>
+                        <button class="cta-button" onclick="addToCart('Camisa Principal', 89.90)">Adicionar ao
+                            Carrinho</button>
+                    </div>
+                    <div class="jersey-card">
+                        <div class="jersey-icon">🏃</div>
+                        <h3>Camisa Alternativa</h3>
+                        <p>Camisa branca com listras azuis elegantes</p>
+                        <div class="price">R$ 89,90</div>
+                        <button class="cta-button" onclick="addToCart('Camisa Alternativa', 89.90)">Adicionar ao
+                            Carrinho</button>
+                    </div>
+                    <div class="jersey-card">
+                        <div class="jersey-icon">⚫</div>
+                        <h3>Third Kit</h3>
+                        <p>Camisa preta especial com tecnologia dry-fit</p>
+                        <div class="price">R$ 99,90</div>
+                        <button class="cta-button" onclick="addToCart('Third Kit', 99.90)">Adicionar ao
+                            Carrinho</button>
+                    </div>
+                    <div class="jersey-card">
+                        <div class="jersey-icon">👶</div>
+                        <h3>Infantil</h3>
+                        <p>Versão infantil da camisa principal</p>
+                        <div class="price">R$ 59,90</div>
+                        <button class="cta-button" onclick="addToCart('Camisa Infantil', 59.90)">Adicionar ao
+                            Carrinho</button>
+                    </div>
+                    <div class="jersey-card">
+                        <div class="jersey-icon">👩</div>
+                        <h3>Feminina</h3>
+                        <p>Corte feminino com modelagem especial</p>
+                        <div class="price">R$ 79,90</div>
+                        <button class="cta-button" onclick="addToCart('Camisa Feminina', 79.90)">Adicionar ao
+                            Carrinho</button>
+                    </div>
+                    <div class="jersey-card">
+                        <div class="jersey-icon">🎯</div>
+                        <h3>Treino</h3>
+                        <p>Camisa de treino oficial do elenco</p>
+                        <div class="price">R$ 69,90</div>
+                        <button class="cta-button" onclick="addToCart('Camisa de Treino', 69.90)">Adicionar ao
+                            Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="section">
+            <div style="color: #fff; text-align: center; padding: 2rem 0;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Últimas Notícias</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>🏆 Vitória Importante!</h3>
+                        <p><strong>FC Dragons 3 x 1 Águias FC</strong></p>
+                        <p>Grande atuação da equipe na última rodada do campeonato. Carlos Silva marcou dois gols e
+                            Lucas Pereira deu uma assistência espetacular.</p>
+                        <small style="color: #999;">Há 2 dias</small>
+                    </div>
+                    <div class="card">
+                        <h3>⚽ Nova Contratação</h3>
+                        <p><strong>Bem-vindo, Diego Martins!</strong></p>
+                        <p>Lateral-esquerdo de 24 anos chega por empréstimo para reforçar a defesa. Ex-jogador da
+                            seleção sub-23.</p>
+                        <small style="color: #999;">Há 5 dias</small>
+                    </div>
+                    <div class="card">
+                        <h3>🏥 Boletim Médico</h3>
+                        <p><strong>Retorno de Pedro Lima</strong></p>
+                        <p>Volante se recupera bem da lesão no joelho e deve voltar aos gramados na próxima semana.</p>
+                        <small style="color: #999;">Há 1 semana</small>
+                    </div>
+                    <div class="card">
+                        <h3>🎫 Ingressos à Venda</h3>
+                        <p><strong>Dragons vs Leões FC</strong></p>
+                        <p>Ingressos para o clássico já estão disponíveis online e nas bilheterias do estádio. Não
+                            perca!</p>
+                        <small style="color: #999;">Há 1 semana</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div style="color: #fff; text-align: center; padding: 2rem 0;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Contato</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>🏟️ Endereço</h3>
+                        <p>Arena dos Dragões</p>
+                        <p>Av. dos Campeões, 1925</p>
+                        <p>Centro - São Paulo, SP</p>
+                        <p>CEP: 01234-567</p>
+                    </div>
+                    <div class="card">
+                        <h3>📞 Telefones</h3>
+                        <p><strong>Secretaria:</strong> (11) 1925-1925</p>
+                        <p><strong>Bilheteria:</strong> (11) 1925-1926</p>
+                        <p><strong>Loja Oficial:</strong> (11) 1925-1927</p>
+                        <p><strong>Emergências:</strong> (11) 1925-1928</p>
+                    </div>
+                    <div class="card">
+                        <h3>📧 E-mail</h3>
+                        <p><strong>Geral:</strong> contato@fcdragons.com.br</p>
+                        <p><strong>Imprensa:</strong> imprensa@fcdragons.com.br</p>
+                        <p><strong>Comercial:</strong> comercial@fcdragons.com.br</p>
+                    </div>
+                    <div class="card">
+                        <h3>⏰ Funcionamento</h3>
+                        <p><strong>Secretaria:</strong></p>
+                        <p>Segunda a Sexta: 8h às 18h</p>
+                        <p><strong>Loja:</strong></p>
+                        <p>Segunda a Sábado: 9h às 19h</p>
+                        <p>Domingo: 10h às 16h</p>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Contact Section -->
+                <div class="whatsapp-contact">
+                    <h3>💬 Fale Conosco pelo WhatsApp</h3>
+                    <p style="margin-bottom: 1.5rem;">Entre em contato direto com nossa equipe para tirar dúvidas,
+                        informações sobre ingressos, produtos ou qualquer assunto relacionado ao clube!</p>
+                    <div>
+                        <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20informações%20sobre%20o%20FC%20Dragons!"
+                            class="whatsapp-btn" target="_blank">
+                            📱 Diretoria - (11) 99999-9999
+                        </a>
+                        <a href="https://wa.me/5511888888888?text=Olá,%20gostaria%20de%20informações%20sobre%20ingressos%20do%20FC%20Dragons!"
+                            class="whatsapp-btn" target="_blank">
+                            🎫 Ingressos - (11) 88888-8888
+                        </a>
+                        <a href="https://wa.me/5511777777777?text=Olá,%20tenho%20interesse%20nos%20produtos%20da%20loja%20oficial%20do%20FC%20Dragons!"
+                            class="whatsapp-btn" target="_blank">
+                            🛍️ Loja Oficial - (11) 77777-7777
+                        </a>
+                    </div>
+                </div>
+
+                <div class="payment-form" style="margin-top: 3rem;">
+                    <h3 style="color: #2c3e50; margin-bottom: 2rem;">Entre em Contato</h3>
+                    <form onsubmit="sendMessage(event)">
+                        <div class="form-group">
+                            <label for="contactName">Nome Completo</label>
+                            <input type="text" id="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">E-mail</label>
+                            <input type="email" id="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Assunto</label>
+                            <select id="contactSubject" required>
+                                <option value="">Selecione...</option>
+                                <option value="duvida">Dúvida Geral</option>
+                                <option value="ingresso">Ingressos</option>
+                                <option value="loja">Loja/Produtos</option>
+                                <option value="imprensa">Imprensa</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Mensagem</label>
+                            <textarea id="contactMessage" rows="4"
+                                style="width: 100%; padding: 0.8rem; border: 2px solid #e1e8ed; border-radius: 10px; font-size: 1rem; resize: vertical;"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%;">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20falar%20com%20a%20diretoria%20do%20FC%20Dragons!"
+        class="whatsapp-float" target="_blank">
+        <span class="whatsapp-tooltip">Fale com a Diretoria</span>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+            <path fill="#fff"
+                d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z">
+            </path>
+            <path fill="#fff"
+                d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z">
+            </path>
+            <path fill="#cfd8dc"
+                d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z">
+            </path>
+            <path fill="#40c351"
+                d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z">
+            </path>
+            <path fill="#fff" fill-rule="evenodd"
+                d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                clip-rule="evenodd"></path>
+        </svg>
+    </a>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeCart()">&times;</button>
+            <h2 style="color: #2c3e50; margin-bottom: 2rem;">Carrinho de Compras</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total" id="cartTotal" style="color: #2c3e50;">Total: R$ 0,00</div>
+            <button class="cta-button" onclick="proceedToPayment()" style="width: 100%; margin-top: 1rem;">Finalizar
+                Compra</button>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closePayment()">&times;</button>
+            <h2 style="color: #2c3e50; margin-bottom: 2rem;">Finalizar Pagamento</h2>
+            <form class="payment-form" onsubmit="processPayment(event)" style="margin: 0;">
+                <div class="form-group">
+                    <label for="customerName">Nome Completo</label>
+                    <input type="text" id="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerEmail">E-mail</label>
+                    <input type="email" id="customerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerPhone">Telefone</label>
+                    <input type="tel" id="customerPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod">Forma de Pagamento</label>
+                    <select id="paymentMethod" required onchange="toggleCardFields()">
+                        <option value="">Selecione...</option>
+                        <option value="credit">Cartão de Crédito</option>
+                        <option value="debit">Cartão de Débito</option>
+                        <option value="pix">PIX</option>
+                        <option value="boleto">Boleto</option>
+                    </select>
+                </div>
+                <div id="cardFields" style="display: none;">
+                    <div class="form-group">
+                        <label for="cardNumber">Número do Cartão</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="cardExpiry">Validade</label>
+                            <input type="text" id="cardExpiry" placeholder="MM/AA">
+                        </div>
+                        <div class="form-group">
+                            <label for="cardCVC">CVV</label>
+                            <input type="text" id="cardCVC" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-total" id="paymentTotal" style="color: #2c3e50; margin: 1rem 0;">Total: R$ 0,00</div>
+                <button type="submit" class="cta-button" style="width: 100%;">
+                    <span id="paymentButtonText">Confirmar Pagamento</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Player Details Modal -->
+    <div id="playerModal" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closePlayerModal()">&times;</button>
+            <div id="playerDetails"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.instagram.com/crentesfa" target="_blank"><i
+                        class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.facebook.com/crentesfa" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/crentesfa" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/crentefa" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <p>Siga-nos nas redes sociais e fique por dentro de todas as novidades!</p>
+        </div>
+        <p>&copy; 🦅 Crentes FA. Todos os direitos reservados.</p>
+    </footer>
