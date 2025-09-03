@@ -52,7 +52,7 @@ function showCartNotification(itemName) {
                 position: fixed;
                 top: 100px;
                 right: 20px;
-                background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+                background: linear-gradient(45deg, #444141, #1a1816);
                 color: white;
                 padding: 1rem 2rem;
                 border-radius: 10px;
@@ -84,10 +84,10 @@ function showCart() {
                             <small>R$ ${item.price.toFixed(2)} x ${item.quantity}</small>
                         </div>
                         <div>
-                            <button onclick="changeQuantity('${item.name}', -1)" style="background: #ff6b6b; color: white; border: none; padding: 0.3rem 0.6rem; border-radius: 5px; margin: 0 0.2rem; cursor: pointer;">-</button>
+                            <button onclick="changeQuantity('${item.name}', -1)" style="background: #1a1816; color: white; border: none; padding: 0.3rem 0.6rem; border-radius: 5px; margin: 0 0.2rem; cursor: pointer;">-</button>
                             <span style="margin: 0 0.5rem;">${item.quantity}</span>
-                            <button onclick="changeQuantity('${item.name}', 1)" style="background: #4ecdc4; color: white; border: none; padding: 0.3rem 0.6rem; border-radius: 5px; margin: 0 0.2rem; cursor: pointer;">+</button>
-                            <button onclick="removeFromCart('${item.name}')" style="background: #e74c3c; color: white; border: none; padding: 0.3rem 0.6rem; border-radius: 5px; margin-left: 1rem; cursor: pointer;">🗑️</button>
+                            <button onclick="changeQuantity('${item.name}', 1)" style="background: #1a1816; color: white; border: none; padding: 0.3rem 0.6rem; border-radius: 5px; margin: 0 0.2rem; cursor: pointer;">+</button>
+                            <button onclick="removeFromCart('${item.name}')" style="background: #af1f12ff; color: white; border: none; padding: 0.3rem 0.6rem; border-radius: 5px; margin-left: 1rem; cursor: pointer;">🗑️</button>
                         </div>
                     </div>
                 `).join('');
